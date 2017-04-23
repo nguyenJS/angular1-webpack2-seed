@@ -9,7 +9,7 @@ This a "Hello World" app which use AngularJS 1 with Webpack 2 and The Marvel Com
 
 `npm install`
 
-This will install all the dev package for dataprep as well as third party libraries required by this application.
+This will install all the dev package for the webapp as well as third party libraries required by this application.
 
 ### Root file structure
 
