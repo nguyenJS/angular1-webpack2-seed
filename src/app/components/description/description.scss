@@ -1,0 +1,12 @@
+.description {
+	display: flex;
+	flex-direction: column;
+
+	padding: 30px;
+
+	.title {
+		font-size: 20px;
+		font-weight: bold;
+		padding-bottom: 15px;
+	}
+}

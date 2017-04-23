@@ -1,5 +1,9 @@
 const HomeWelcomeComponent = {
-	template: `Welcome to Marvel Fan Website`,
+	template: `
+	<div class="title">
+		Welcome to Marvel Fan Website
+	</div>
+	`,
 };
 
 export default HomeWelcomeComponent;

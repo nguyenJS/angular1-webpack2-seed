@@ -1,30 +1,77 @@
-$tc-layout-header-height: 30px;
+$tc-layout-header-height: 25px;
 $tc-layout-main-min-width: 1000px;
-
+$primary-color : #0b97c4;
 .app {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	.header {
 		flex-grow: 0;
 		flex-shrink: 0;
 		flex-basis: $tc-layout-header-height;
+		padding: 5px 15px;
+
+		background-color: darken($primary-color, 10);
+		color: white;
 	}
 
 	.content {
 		display: flex;
 		flex-direction: row;
+		height: calc(100vh - #{$tc-layout-header-height});
 
 		.main {
 			flex-grow: 1;
 			overflow: auto;
-			height: calc(100vh - #{$tc-layout-header-height});
+
+			.title {
+				font-size: 20px;
+				padding: 30px;
+				display: flex;
+				justify-content: center;
+			}
+
+			table, th , td {
+				border: 1px solid grey;
+				border-collapse: collapse;
+				padding: 5px;
+			}
+
+			table tr:nth-child(odd) {
+				background-color: #f1f1f1;
+			}
+			table tr:nth-child(even) {
+				background-color: #ffffff;
+			}
 		}
 
 		.sidemenu {
+			margin: 0;
 			flex-grow: 0;
 			flex-shrink: 0;
+			padding: 15px 0;
+
+			background-color: $primary-color;
+			color: white;
+
+			li {
+				padding: 10px;
+				list-style: none;
+
+				&:hover {
+					background-color: lighten($primary-color, 10);
+				}
+
+				.active {
+					font-weight: bold;
+				}
+			}
 		}
 	}
 

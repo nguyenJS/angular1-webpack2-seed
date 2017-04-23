@@ -1,13 +1,17 @@
 const HomeComicComponent = {
-	template: `
-	<div class="header">
-		Comics
-	</div>
-	<ul>
-		<li ng-repeat="comic in $ctrl.comics track by $index">
-			<a ui-sref="comic({comicId: comic.id})">{{comic.title}}</a>
-		</li>
-	</ul>`,
+	template:
+		`<table>
+		 	<tr>
+				<th>Title</th>
+				<th>Format</th>
+				<th>Number of pages</th>
+  			</tr>
+			<tr ng-repeat="comic in $ctrl.comics track by $index">
+				<td><a ui-sref="comic({comicId: comic.id})">{{comic.title}}</a></td>
+				<td>{{ comic.format }}</td>
+				<td>{{ comic.pageCount }}</td>
+			</tr>
+		</table>`,
 	controller(ComicRestService) {
 		ComicRestService.getComics()
 			.then((comics) => {

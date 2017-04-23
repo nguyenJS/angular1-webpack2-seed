@@ -1,14 +1,15 @@
 const HomeCreatorComponent = {
 	template: `
-		<div class="header">
-			Creators
-		</div>
-		<ul>
-			<li ng-repeat="creator in $ctrl.creators track by $index">
-				<a ui-sref="creator({creatorId: creator.id})">{{creator.firstName}} {{creator.lastName}}</a>
-			</li>
-		</ul>
-	`,
+		<table>
+			<tr>
+				<th>FirstName</th>
+				<th>LastName</th>
+  			</tr>
+			<tr ng-repeat="creator in $ctrl.creators track by $index">
+				<td><a ui-sref="creator({creatorId: creator.id})">{{creator.firstName}}</a></td>
+				<td><a ui-sref="creator({creatorId: creator.id})">{{creator.lastName}}</a></td>
+			</tr>
+		</table>`,
 	controller(CreatorRestService) {
 		CreatorRestService.getCreators()
 		.then((creators) => {
