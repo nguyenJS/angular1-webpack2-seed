@@ -1,0 +1,28 @@
+# Created by .gitignore support plugin (hsz.mobi)
+
+### JetBrains template
+## Directory-based project format
+.idea/
+
+## File-based project format
+*.iml
+
+### Node template
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directory
+node_modules
+
+### npm
+# log file
+npm-debug.log
+
+### Project
+.DS_Store
+.sass-cache/
+.tmp/
+build/
+node/
+ngdoc/
+*.mine.json

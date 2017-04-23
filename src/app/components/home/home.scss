@@ -1,0 +1,31 @@
+$tc-layout-header-height: 30px;
+$tc-layout-main-min-width: 1000px;
+
+.app {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	.header {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: $tc-layout-header-height;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: row;
+
+		.main {
+			flex-grow: 1;
+			overflow: auto;
+			height: calc(100vh - #{$tc-layout-header-height});
+		}
+
+		.sidemenu {
+			flex-grow: 0;
+			flex-shrink: 0;
+		}
+	}
+
+}
